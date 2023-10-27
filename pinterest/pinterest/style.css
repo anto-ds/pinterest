@@ -1,0 +1,670 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, button, input {
+  font-family: -apple-system, Ubuntu, Arial, sans-serif;
+}
+
+*, li {
+  list-style: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 252px);
+  visibility: hidden;
+  pointer-events: none;
+  max-height: 0px;
+}
+.grid.active {
+  max-height: unset;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 1s;
+}
+.column:nth-child(1) {
+  margin-top: 0;
+  transition-delay: 0s;
+}
+.column:nth-child(2) {
+  margin-top: 160px;
+  transition-delay: 0.2s;
+}
+.column:nth-child(3) {
+  margin-top: 320px;
+  transition-delay: 0.4s;
+}
+.column:nth-child(4) {
+  margin-top: 480px;
+  transition-delay: 0.6s;
+}
+.column:nth-child(5) {
+  margin-top: 320px;
+  transition-delay: 0.8s;
+}
+.column:nth-child(6) {
+  margin-top: 160px;
+  transition-delay: 1s;
+}
+.column:nth-child(7) {
+  margin-top: 0;
+  transition-delay: 1.2s;
+}
+
+.item {
+  width: 236px;
+  height: 350px;
+  background: #e60023;
+  border-radius: 10px;
+}
+
+.item:not(:first-child) {
+  margin-top: 16px;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: fixed;
+  justify-content: space-between;
+  background-color: #fff;
+  z-index: 99;
+}
+header .logo {
+  width: 30px; /* Set the width to your desired size */
+  height: auto;
+}
+header h3 {
+  color: #e60023;
+  font-size: 30px;
+  font-weight: 700;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+header nav ul li {
+  padding: 16px;
+}
+header nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #111;
+  font-weight: 700;
+}
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+header nav .buttons {
+  display: flex;
+  margin-left: 24px;
+}
+header nav .buttons .login {
+  color: #fff;
+  background: #e60023;
+}
+header nav .buttons .signup {
+  margin-left: 16px;
+  background: #efefef;
+}
+
+.heading {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.heading .text {
+  font-weight: 600;
+  font-size: 60px;
+}
+.heading .wrapper {
+  position: relative;
+}
+.heading .wrapper .offset {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%);
+}
+.heading .wrapper .text {
+  white-space: nowrap;
+  color: #e60023;
+  transition-duration: 1s;
+}
+
+.animate-before {
+  transform: translateY(40px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.animate-after {
+  transform: translateY(-40px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.secondpageimages {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.secondpageimage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.image1 {
+  height: 250px;
+  width: 181px;
+  bottom: 150px;
+  left: 450px;
+  position: absolute;
+}
+
+.image2 {
+  position: absolute;
+  height: 250px;
+  width: 181px;
+  left: 100px;
+}
+
+.image3 {
+  position: absolute;
+  width: 18rem;
+  left: 250px;
+  z-index: 1;
+}
+
+.image4 {
+  position: absolute;
+  height: 230px;
+  width: 181px;
+  top: 150px;
+  left: 450px;
+  z-index: 0;
+}
+
+.search-container {
+  position: absolute;
+  top: 370px;
+  right: 450px;
+  z-index: 2;
+  display: flex;
+}
+
+.fa-search {
+  margin-right: 5px;
+}
+
+input#searchBox {
+  width: 250px;
+  height: 70px;
+  border: none;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  padding-left: 15px;
+  color: rgb(110, 15, 60);
+  font-size: 24px;
+  font-weight: bold;
+  font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif;
+}
+
+.secondpagetext {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+}
+
+.secondpagehead {
+  font-size: 60px;
+  color: rgb(195, 25, 82);
+  font-weight: bold;
+}
+
+.secondpagecontent {
+  font-size: 24px;
+  color: rgb(195, 25, 82);
+  justify-content: center;
+  position: relative;
+  display: flex;
+  width: 400px;
+  padding-left: 33px;
+  font-weight: lighter;
+}
+
+.Explore {
+  color: #fff;
+  background: rgb(195, 25, 82);
+}
+
+.buttonexplore {
+  padding-left: 180px;
+  padding-top: 10px;
+}
+
+.firstpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  position: relative;
+}
+
+.secondpage {
+  position: relative;
+  z-index: 10;
+  height: 100vh;
+  background-color: #FFFD92;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.thirdpage {
+  position: relative;
+  z-index: 10;
+  height: 100vh;
+  background-color: #DAFFF6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fourthpage {
+  position: relative;
+  z-index: 10;
+  height: 100vh;
+  background-color: #FFE2EB;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fifthpage {
+  position: relative;
+  height: 100vh;
+}
+
+.thirdpagetext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  position: relative;
+}
+
+.thirdpageimage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+}
+
+.thirdpagehead {
+  font-size: 60px;
+  color: rgb(0, 107, 108);
+  font-weight: bold;
+}
+
+.thirdpagecontent {
+  font-size: 24px;
+  color: rgb(0, 107, 108);
+  justify-content: center;
+  position: relative;
+  display: flex;
+  width: 400px;
+  padding-left: 33px;
+  font-weight: lighter;
+}
+
+.thirdpagebutton {
+  color: #fff;
+  background: rgb(0, 107, 108);
+}
+
+.buttonthirdpage {
+  padding-left: 60px;
+  padding-top: 10px;
+}
+
+.firstimage {
+  position: relative;
+  height: 400px;
+  width: 420px;
+}
+
+.thirdpageimage1 {
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+}
+
+.imageclass {
+  position: relative;
+}
+
+.firstimagetext {
+  width: 100%;
+  position: absolute;
+  bottom: 130px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 56px;
+  padding: 50px;
+}
+
+.subimage {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 240px;
+  left: 60px;
+}
+
+.subimage1 {
+  height: 130px;
+  width: 90px;
+  padding: 5px;
+}
+
+.secondimage {
+  width: 223px;
+  height: 235px;
+  position: absolute;
+  left: 451px;
+  top: -20px;
+}
+
+.thirdpageimage2 {
+  width: 223px;
+  height: 235px;
+}
+
+.secondimagetext {
+  position: absolute;
+  bottom: 10px;
+  font-size: 33px;
+  font-weight: 500;
+  color: #fff;
+  padding: 12px;
+}
+
+.forthpageimage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.forthpagetext {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  padding-left: 50px;
+  padding-right: 410px;
+}
+
+.fourthpagehead {
+  font-size: 60px;
+  color: rgb(195, 47, 0);
+  font-weight: bold;
+}
+
+.fourthpagecontent {
+  font-size: 24px;
+  color: rgb(195, 47, 0);
+  justify-content: center;
+  position: relative;
+  display: flex;
+  width: 400px;
+  padding-left: 80px;
+  padding-top: 10px;
+  font-weight: lighter;
+}
+
+.buttonforthpage {
+  padding-left: 180px;
+  padding-top: 10px;
+}
+
+.forthpagebutton {
+  color: #fff;
+  background: rgb(195, 47, 0);
+}
+
+.forthpageimage {
+  width: 50%;
+  height: 100vh;
+  position: relative;
+}
+
+.fourthpageimage1 {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 7px;
+}
+
+.fourthpageimage2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-130%, -120%);
+}
+
+.fourthpageimage2-cont {
+  position: absolute;
+  width: 215px;
+  height: 383px;
+}
+
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 11px 12px;
+  border-radius: 24px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backgroundcolumn img {
+  height: 100%;
+  margin: 10px 10px 10px 10px;
+  border-radius: 14px;
+}
+
+.fifthpagebackground .backgroundcolumn:nth-child(1) {
+  margin-top: 0px;
+}
+
+.fifthpagebackground .backgroundcolumn:nth-child(2) {
+  margin-top: -160px;
+}
+
+.fifthpagebackground .backgroundcolumn:nth-child(3) {
+  margin-top: -320px;
+}
+
+.fifthpagebackground .backgroundcolumn:nth-child(4) {
+  margin-top: -480px;
+}
+
+.fifthpagebackground .backgroundcolumn:nth-child(5) {
+  margin-top: -320px;
+}
+
+.fifthpagebackground .backgroundcolumn:nth-child(6) {
+  margin-top: -160px;
+}
+
+.bgimage {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 236px;
+}
+
+.fifthpagebackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.signuppage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.signuphead {
+  position: relative;
+  height: 100%;
+  width: 40%;
+  z-index: 3;
+  color: #fff;
+  font-size: 70px;
+  font-weight: 600;
+  padding-left: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signupform {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  z-index: 3;
+}
+
+.signupcontent {
+  margin-top: 42px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 620px;
+  width: 404px;
+  border-radius: 32px;
+}
+
+.signuppageheader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signuppageheader img {
+  height: 45px;
+  width: 45px;
+  margin: 8px auto 6px;
+}
+
+.signupdetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+}
+
+.signupdetails input {
+  border-radius: 16px;
+  border-color: #cdcdcd;
+  padding: 8px 16px;
+  border-style: solid;
+  border-width: 2px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.signupdetails label {
+  padding: 5px;
+}
+
+.buttoncontinue {
+  padding-top: 5px;
+}
+
+.countinue {
+  color: #fff;
+  background: rgb(195, 25, 82);
+  width: 100%;
+}
+
+.or {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.facebook {
+  color: #fff;
+  background: rgb(90, 148, 242);
+  width: 100%;
+}
+
+.google {
+  color: rgb(142, 140, 140);
+  background: rgb(255, 255, 255);
+  width: 100%;
+  border: 1px solid rgb(142, 140, 140) !important;
+}
+
+.terms {
+  font-size: x-small;
+  padding-top: 10px;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */

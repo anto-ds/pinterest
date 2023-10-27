@@ -1,0 +1,101 @@
+.secondpageimages{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+
+}
+.secondpageimage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.image1{
+    height: 250px;
+    width: 181px;
+    bottom: 150px;
+    left: 450px;
+    position: absolute;
+}
+.image2{
+    position: absolute;
+    height: 250px;
+    width: 181px;
+    left: 100px;
+
+}
+.image3{
+    position: absolute;
+    width: 18rem;
+    left: 250px;
+    z-index: 1;
+
+}
+.image4{
+    
+    position: absolute;
+    height: 230px;
+    width: 181px;
+    top: 150px;
+    left: 450px;
+    z-index: 0;
+
+}
+.search-container {
+    position: absolute; 
+    top: 370px; 
+    right: 450px; 
+    z-index: 2; 
+    display: flex; 
+}
+.fa-search {
+    margin-right: 5px; 
+}
+
+
+input#searchBox {
+    width: 250px;
+    height: 70px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding-left: 15px;
+    color: rgb(110, 15, 60);
+    font-size: 24px;
+    font-weight: bold;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif;
+}
+.secondpagetext{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+}
+.secondpagehead{
+    font-size: 60px;
+    color: rgb(195, 25, 82);
+    font-weight: bold;
+}
+.secondpagecontent{
+    font-size: 24px;
+    color: rgb(195, 25, 82);
+    justify-content: center;
+    position: relative;
+    display: flex;
+    width: 400px;
+    padding-left: 33px;
+    font-weight: lighter;
+}
+.Explore{
+    color: $white;
+    background: rgb(195, 25, 82);
+}
+.buttonexplore{
+    padding-left: 180px;
+    padding-top: 10px;
+}

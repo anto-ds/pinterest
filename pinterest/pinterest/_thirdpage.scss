@@ -1,0 +1,94 @@
+.thirdpagetext{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    position: relative;
+}
+.thirdpageimage{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+}
+.thirdpagehead{
+    font-size: 60px;
+    color: rgb(0, 107, 108);
+    font-weight: bold;
+}
+
+.thirdpagecontent{
+    font-size: 24px;
+    color: rgb(0, 107, 108);
+    justify-content: center;
+    position: relative;
+    display: flex;
+    width: 400px;
+    padding-left: 33px;
+    font-weight: lighter;
+}
+.thirdpagebutton{
+    color: $white;
+    background: rgb(0, 107, 108);
+}
+.buttonthirdpage{
+    padding-left: 60px;
+    padding-top: 10px;
+}
+.firstimage{
+    position: relative;
+    height: 400px;
+    width: 420px;
+}
+.thirdpageimage1{
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+}
+.imageclass{
+    position: relative;
+}
+.firstimagetext{
+    width: 100%;
+    position: absolute;
+    bottom: 130px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 56px;
+    padding: 50px;
+}
+.subimage{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 240px;
+    left: 60px;
+}
+.subimage1{
+    height: 130px;
+    width: 90px;
+    padding: 5px;
+}
+.secondimage{
+    width: 223px;
+    height: 235px;
+    position: absolute;
+    left: 451px;
+    top: -20px;
+}
+.thirdpageimage2{
+    width: 223px;
+    height: 235px;
+}
+.secondimagetext{
+    position: absolute;
+    bottom: 10px;
+    font-size: 33px;
+    font-weight: 500;
+    color: #fff;
+    padding: 12px;
+}
